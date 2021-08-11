@@ -4,7 +4,9 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn
+public abstract class Item extends BaseEntity{
 
     @Id
     @GeneratedValue() //default = auto.

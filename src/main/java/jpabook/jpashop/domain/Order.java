@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ORDERS") //DB에서 ORDER 예약어 ㅎㅎ
-public class Order {
+public class Order extends BaseEntity{
     @Id
     @GeneratedValue() //default = auto.
     @Column(name = "ORDER_ID")
